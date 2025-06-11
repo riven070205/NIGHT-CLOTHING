@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      margin-bottom: 2rem;
+    }
+    .item {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .item img {
+      width: 100px;
+      border-radius: 6px;
+    }
+    .info {
+      flex: 1;
+    }
+    .total, .checkout-button {
+      margin-top: 2rem;
+      text-align: right;
+    }
+    .remove-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .checkout-button button {
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    #checkout-form {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    #checkout-form input, #checkout-form textarea {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+    .form-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Cart</h1>
+  <div id="cart-items"></div>
+  <div class="total" id="cart-total"></div>
+  <div class="checkout-button">
+    <button id="checkout-btn">Checkout Selected</button>
+  </div>
+
+  <div id="checkout-form">
+    <div class="form-title">Shipping Information</div>
+    <input type="text" id="name" placeholder="Full Name" required>
+    <textarea id="address" placeholder="Full Address" required></textarea>
+    <input type="text" value="Cash on Delivery" disabled>
+    <button onclick="submitOrder()">Place Order</button>
+  </div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartContainer = document.getElementById('cart-items');
+    const totalDisplay = document.getElementById('cart-total');
+
+    function renderCart() {
+      cartContainer.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'item';
+
+        itemDiv.innerHTML = `
+          <input type="checkbox" class="select-item" data-index="${index}">
+          <img src="${item.image}" alt="${item.name}">
+          <div class="info">
+            <h3>${item.name}</h3>
+            <p>₱${item.price} × ${item.quantity}</p>
+            <p>Color: ${item.color || 'N/A'} | Size: ${item.size}</p>
+          </div>
+          <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+        `;
+
+        cartContainer.appendChild(itemDiv);
+        total += item.price * item.quantity;
+      });
+
+      totalDisplay.innerHTML = `<strong>Total: ₱${total.toLocaleString()}.00</strong>`;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+      const checkboxes = document.querySelectorAll('.select-item:checked');
+      if (checkboxes.length === 0) {
+        alert('Please select at least one item to checkout.');
+        return;
+      }
+
+      document.getElementById('checkout-form').style.display = 'block';
+    });
+
+    function submitOrder() {
+      const name = document.getElementById('name').value.trim();
+      const address = document.getElementById('address').value.trim();
+
+      if (!name || !address) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      alert(`Thank you ${name}! Your order will be delivered to:\n${address}\n\nPayment: Cash on Delivery`);
+      localStorage.removeItem('cart');
+      window.location.href = "project.html";
+    }
+
+    renderCart();
+  </script>
+</body>
+</html>

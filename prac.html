@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+</head>
+<body>
+  <h1>Product List</h1>
+
+  <div class="product">
+    <h2>Product A</h2>
+    <p>Price: $10</p>
+    <button onclick="addToCart('Product A', 10)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h2>Product B</h2>
+    <p>Price: $20</p>
+    <button onclick="addToCart('Product B', 20)">Add to Cart</button>
+  </div>
+
+  <a href="praccheck.html">Go to Checkout</a>
+  <button onclick="completePurchase()">Complete Purchase</button>
+  <script>
+    function completePurchase() {
+    localStorage.removeItem('cart');
+    alert("Thank you for your purchase!");
+    window.location.href = 'index.html';
+  }
+
+    function addToCart(name, price) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const existingProduct = cart.find(p => p.name === name);
+      if (existingProduct) {
+        existingProduct.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${name} added to cart!`);
+    }
+  </script>
+</body>
+</html>

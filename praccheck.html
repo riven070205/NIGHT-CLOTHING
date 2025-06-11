@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+</head>
+<body>
+  <h1>Checkout</h1>
+  <div id="cart-items"></div>
+
+  <script>
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const container = document.getElementById('cart-items');
+
+    if (cartItems.length === 0) {
+      container.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+      let total = 0;
+      const list = document.createElement('ul');
+
+      cartItems.forEach(item => {
+        const li = document.createElement('li');
+        const subtotal = item.price * item.quantity;
+        total += subtotal;
+
+        li.textContent = `${item.name} - $${item.price} x ${item.quantity} = $${subtotal}`;
+        list.appendChild(li);
+      });
+
+      container.appendChild(list);
+      container.innerHTML += `<h3>Total: $${total}</h3>`;
+    }
+  </script>
+</body>
+</html>

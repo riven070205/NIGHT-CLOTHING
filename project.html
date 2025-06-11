@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Night Clothing</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+
+   <header class="site-header" id="site-header">
+  <div class="logo">NIGHT</div>
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#all-products">Shop</a>
+    <a href="#about-night">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="carousel-full">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide active">
+            <img src="night clothing front page.jpg" alt="Look 1">
+          </div>
+          <div class="carousel-slide">
+            <img src="model 1.jpg" alt="Look 2">
+          </div>
+          <div class="carousel-slide">
+            <img src="frontdaw.jpg" alt="Look 3">
+          </div>
+          <div class="carousel-slide">
+            <img src="front 4.jpg" alt="Look 4">
+          </div>
+          <div class="carousel-slide">
+            <img src="front 5.jpg" alt="Look 5">
+          </div>
+
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+      </section>
+
+<div class="welcome-banner">
+  <h1>WELCOME TO NIGHT CLOTHING!</h1>
+  <p>Embracing a lifestyle that embraces the Night's essence.</p>
+</div>
+
+<div class="section-divider">
+  <span></span>
+  <h1 class="all-products-heading" id="all-products">ALL PRODUCTS</h1>
+  <span></span>
+</div>
+
+ <div class="product-grid">
+
+    <div class="product-card" onclick="goToProduct('Night Classic Boxy Tee', '479', 'night product 1.jpg')">
+        <div class="image-container hover-img">
+            <img class="main-img" src="night product 1.jpg" alt="Night Pastel Tee" />
+            <img class="hover-img" src="product 1 hover.jpg" alt="Night Pastel Tee Hover" />
+            <div class="overlay">Quick View</div>
+
+          </div>
+          <h3>Night Classic Boxy Tee</h3>
+          <p>₱479.00</p>
+        </div>
+
+    <div class="product-card" onclick="goToProduct('Night Big Logo Tee', '550', 'product 2.jpg')">
+        <div class="image-container hover-img">
+            <img class="main-img" src="product 2.jpg" alt="Night Big Logo" />
+            <img class="hover-img" src="product 2 hover.jpg" alt="Night Big Logo" />
+            <div class="overlay">Quick View</div>
+          </div>
+          <h3>Night Big Logo Tee</h3>
+          <p>₱550.00</p>
+        </div>
+
+    <div class="product-card" onclick="goToProduct('Night Ethereal V2', '450', 'product 3.jpg')">
+        <div class="image-container hover-img">
+            <img class="main-img" src="product 3.jpg" alt="Graffiti Tee" />
+            <img class="hover-img" src="product 3 hover.jpg" alt="Graffiti Hover" />
+            <div class="overlay">Quick View</div>
+          </div>
+          <h3>Night Ethereal V2</h3>
+          <p>₱450.00</p>
+        </div>
+
+    <div class="product-card" onclick="goToProduct('Night Pastel Tee', '450', 'product 4.jpg')">
+        <div class="image-container hover-img">
+            <img class="main-img" src="product 4.jpg" alt="Arc Collection" />
+            <img class="hover-img" src="product 4 hover.jpg" alt="Arc Hover" />
+            <div class="overlay">Quick View</div>
+          </div>
+          <h3>Night Pastel Tee</h3>
+          <p>₱450.00</p>
+        </div>
+
+    <div class="product-card" onclick="goToProduct('Night Y2K Tee', '349', 'model 1.jpg')">
+        <div class="image-container hover-img">
+            <img class="main-img" src="model 1.jpg" alt="Logo Tee" />
+            <img class="hover-img" src="product 5 hover.jpg" alt="Logo Hover" />
+            <div class="overlay">Quick View</div>
+          </div>
+          <h3>Night Y2K Tee</h3>
+          <p>₱349.00</p>
+          </div>
+
+    <div class="product-card" onclick="goToProduct('Night Graffiti Tee', '369', 'product 6.jpg')">
+      <div class="image-container hover-img">
+        <img class="main-img" src="product 6.jpg" alt="Retro Tee" />
+        <img class="hover-img" src="product 6 hover.jpg" alt="Retro Hover" />
+        <div class="overlay">Quick View</div>
+      </div>
+      <h3>Night Graffiti Tee</h3>
+      <p>₱369.00</p>
+      </div>
+
+    <div class="product-card" onclick="goToProduct('Night Flower Tee', '410', 'product 7.jpg')">
+        <div class="image-container hover-img">
+            <img class="main-img" src="product 7.jpg" alt="Bold Tee" />
+            <img class="hover-img" src="product 7 hover.jpg" alt="Bold Hover" />
+            <div class="overlay">Quick View</div>
+          </div>
+          <h3>Night Flower Tee</h3>
+          <p>₱410.00</p>
+          </div>
+
+    <div class="product-card" onclick="goToProduct('Night Ethereal Tee', '299', 'product 8.jpg')">
+        <div class="image-container hover-img">
+            <img class="main-img" src="product 8.jpg" alt="Minimal Tee" />
+            <img class="hover-img" src="product 8 hover.jpg" alt="Minimal Hover" />
+            <div class="overlay">Quick View</div>
+          </div>
+          <h3>Night Ethereal Tee</h3>
+          <p>₱299.00</p>
+          </div>
+      </div>
+      
+</div>
+
+<button id="toggle-cart" style="position: fixed; top: 100px; right: 20px; z-index: 1001; background: black; color: white; padding: 10px 16px; border: none; border-radius: 6px; cursor: pointer;">🛒 Cart</button>
+
+<div id="cart-backdrop"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <button id="close-cart" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:20px; cursor:pointer;">&times;</button>
+  <h3 style="margin-top: 30px;">Your Cart</h3>
+  <div id="mini-cart-items"></div>
+  <div id="mini-cart-total" style="margin-top: 1rem; font-weight: bold;"></div>
+  <div style="margin-top: 1rem; text-align: center;">
+    <a href="checkout.html" style="display: inline-block; background: black; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px;">Go to Checkout</a>
+  </div>
+</div>
+
+<style>
+.cart-sidebar {
+  position: fixed;
+  top: 100px;
+  right: -400px;
+  width: 400px;
+  background: white;
+  color: black;
+  padding: 1rem;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  z-index: 1002;
+  max-height: 80vh;
+  overflow-y: auto;
+  transition: right 0.4s ease-in-out;
+}
+.cart-sidebar.open {
+  right: 0;
+}
+#cart-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1001;
+  display: none;
+}
+#cart-backdrop.visible {
+  display: block;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border-radius: 6px;
+}
+.cart-item:hover {
+  background: #f9f9f9;
+  transform: translateX(-5px);
+}
+.cart-item img {
+  width: 90px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.cart-item-details {
+  flex: 1;
+}
+.cart-item-details h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+.cart-item-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+.remove-btn {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-left: auto;
+}
+</style>
+
+<script>
+function renderMiniCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const miniCart = document.getElementById('mini-cart-items');
+  const totalDisplay = document.getElementById('mini-cart-total');
+  let total = 0;
+
+  miniCart.innerHTML = '';
+
+  cart.forEach((item, index) => {
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'cart-item';
+    itemDiv.innerHTML = `
+      <img src="${item.image}" alt="${item.name}" />
+      <div class="cart-item-details">
+        <h4>${item.name}</h4>
+        <p>${item.size}, ${item.color || 'N/A'}</p>
+        <p>₱${item.price} × ${item.quantity}</p>
+      </div>
+      <button class="remove-btn" onclick="removeCartItem(${index})">Remove</button>
+    `;
+    miniCart.appendChild(itemDiv);
+    total += item.price * item.quantity;
+  });
+
+  totalDisplay.textContent = `Total: ₱${total.toLocaleString()}.00`;
+}
+
+function removeCartItem(index) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderMiniCart();
+}
+
+renderMiniCart();
+
+const toggleButton = document.getElementById("toggle-cart");
+const cartSidebar = document.getElementById("cart-sidebar");
+const closeCartBtn = document.getElementById("close-cart");
+const backdrop = document.getElementById("cart-backdrop");
+
+function openCart() {
+  cartSidebar.classList.add("open");
+  backdrop.classList.add("visible");
+}
+
+function closeCart() {
+  cartSidebar.classList.remove("open");
+  backdrop.classList.remove("visible");
+}
+
+toggleButton.addEventListener("click", openCart);
+closeCartBtn.addEventListener("click", closeCart);
+backdrop.addEventListener("click", closeCart);
+</script>
+
+
+<div class="about-night-section" id="about-night">
+  <div class="about-text">
+    <h2>About Night</h2>
+    <h4>Embracing a lifestyle that embraces the Night's essence.</h4>
+    <p>
+      Night Clothing is here to help shoppers like you find clothing they love without compromising on quality.
+      We carefully select each piece in our collections, making sure that it meets our high standards.
+      Our clothing feels exceptional because it is: expertly crafted to fit well, last long and look great.
+      Shop today and experience it yourself.
+    </p>
+   </div>
+    <div class="about-image">
+      <img src="about night.jpg">
+
+  </div>
+  </div>
+
+<section class="shop-products">
+    <div class="section-divider">
+      <span></span>
+      <h1>Shop all our Products</h1>
+      <span></span>
+    </div>
+    <div class="product-gallery">
+      <img src="shop product 1.jpg" alt="Product 1" loading="lazy" />
+      <img src="duo-2.jpg" alt="Product 2" loading="lazy" />
+      <img src="shop product 3.jpg" alt="Product 3" loading="lazy" />
+      <img src="shop product 4.jpg" alt="Product 4" loading="lazy" />
+      <img src="shop product 5.jpg" alt="Product 5" loading="lazy" />
+      <img src="shop product 6.jpg" alt="Product 6" loading="lazy" />
+      <img src="shop product 7.jpg" alt="Product 7" loading="lazy" />
+      <img src="shop product 8.jpg" alt="Product 8" loading="lazy" />
+    </div>
+  </section>
+
+  <div class="photobottom">
+  <img class="photobottom" src= "last pic.jpg">
+
+  </div>
+
+
+
+
+ <div class="learn-more-container">
+  <a href="#" class="learn-more-btn">Learn More</a>
+</div>
+
+
+  <footer class="footer" id="contact">
+  <div class="footer-container">
+   <div class="footer-section left">
+  <a href="https://www.facebook.com/NghtClothing" target="_blank">
+    <img src="https://img.icons8.com/m_sharp/512/FFFFFF/facebook-new.png" alt="Facebook" class="social-logo">
+  </a>
+  <a href="https://www.instagram.com/thenight.clothing/" target="_blank">
+    <img src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png" alt="Instagram" class="social-logo">
+  </a>
+  <a href="https://www.tiktok.com/@night.clothing?_r=1&_d=secCgYIASAHKAESPgo8lgH0tZupnA35j2%2BLaXlJMW4y%2BWVh6jShPSvNsU9T0c8M1Hd13bDDcb5aWgVz5Dy%2B%2BznyOLy33EOX1984GgA%3D&_svg=1&checksum=930892842af0ae5318d95493dd8d9ed08cb1bfd342a6c0b45798808dc4c5b3e5&sec_uid=MS4wLjABAAAA4dczbFjeoaoFmJPECfKRAcRO4SJIluuDLiDsDUbyIL34cetyFwHSNEhtMheYIrW6&sec_user_id=MS4wLjABAAAA9o9BiOT26pr0G4yE0FXu2qCWQCJ_ucvm9HbDcgtJZ5nIdX4p1hareAfzRahwC-6V&share_app_id=1180&share_author_id=7048604054021637122&share_link_id=1F33CEB9-DCAC-4577-A1EC-CB4EAFEB7D73&share_scene=1&sharer_language=en&social_share_type=5&source=h5_t&timestamp=1749488133&tt_from=copy&u_code=d6k08lgbbhel7m&ug_btm=b6880%2Cb5836&user_id=6703032756857799681&utm_campaign=client_share&utm_medium=ios&utm_source=copy" target="_blank">
+    <img src="https://img.icons8.com/ios7/600/FFFFFF/tiktok.png" alt="TikTok" class="social-logo">
+  </a>
+</div>
+
+    <div class="footer-section center">
+      <h2>Night Clothing</h2>
+      <h5>thenightclothing@gmail.com</h5>
+      <h5>09557357320</h5>
+    </div>
+
+    <div class="footer-section right">
+      <p>Kawit Cavite</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy;2023 by Night Clothing.
+  </div>
+</footer>
+  <script src="project.js"></script>
+
+</body>
+</html>
